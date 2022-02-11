@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    /* 가로 스크롤이 안생기게 하도록 */
+    overflow-x: hidden;
+    color: rgb(29, 29, 31);
+    letter-spacing: -0.05em;
+    background: #fff;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: rgb(29, 29, 31);
+    text-decoration: none;
+}
+
+.global-nav {
+    height: 44px;
+    padding: 0 1rem;
+}
+
+.local-nav {
+    height: 52px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 1rem;
+}
+
+.global-nav-links,
+.local-nav-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.global-nav-links {
+    justify-content: space-between;
+}
+
+.product-name {
+    /* 해당 클래스의 컨텐츠만 왼쪽에 붙어있는걸 확인할 수 있는데 margin-right: auto를 주면 나머지가 오른쪽에 쫙붙는다. */
+    margin-right: auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.local-nav-links a:not(.product-name) {
+    font-size: 0.8rem;
+    margin-left: 2em;
+}
+
+.scroll-section {
+    padding-top: 50vh;
+}
+
+#scroll-section-0 h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.main-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    height: 3em;
+    font-size: 2.5rem;
+}
+
+.main-message p {
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main-message small {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+#scroll-section-2 .main-message {
+    font-size: 3.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #888;
+    padding: 0 1rem;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.description strong {
+    font-size: 3rem;
+    color: black;
+    float: left;
+    margin-right: 0.2em;
+}
+
+.desc-message {
+    font-weight: bold;
+    width: 50%;
+}
+
+.pin {
+    width: 1px;
+    height: 100px;
+    background: rgb(29, 29, 31);
+}
+
+.mid-message {
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: #888;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mid-message strong {
+    color: rgb(29, 29, 31);
+}
+
+.canvas-caption {
+    color: #888;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    background-color: darkorange;
+    color: #fff;
+}
+
+@media (min-width: 1024px) {
+    #scroll-section-0 h1 {
+        font-size: 9vw;
+    }
+
+    .main-message {
+        font-size: 4vw;
+    }
+
+    .description {
+        max-width: 1000px;
+    }
+
+    .description strong {
+        font-size: 6rem;
+    }
+
+    #scroll-section-2 .main-message {
+        font-size: 6vw;
+    }
+
+    .main-message small {
+        font-size: 1.5vw;
+    }
+
+    .desc-message {
+        width: 20%;
+    }
+
+    .mid-mseeage {
+        font-size: 4vw;
+    }
+
+    /* font-size를 맞출때 vw와 rem을 번갈아서 쓰는이유 */
+    /* rem은 html에 지정한 font-size를 14px를 따라감. 즉, 브라우저 창크기와 비교하면 고정값이죠(픽셀값이 변하는게 아니니까)  */
+    /* 하지만 vw를 쓰면 브라우저 창 크기에 따라 크기를 변동하게 하기 위함. */
+    .canvas-caption {
+        font-size: 2rem;
+    }
+}
